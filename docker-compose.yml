@@ -1,0 +1,37 @@
+version: '3.5'
+
+services:
+
+  frontend:
+    build: 
+      context: ./frontend
+    ports:
+      - "9090:9090"  
+    restart: always
+    networks:
+      - mynetwork
+    depends_on:
+      - backend
+    volumes:
+        - ./frontend:/app
+    
+  backend:
+    build: 
+      context: ./backend
+    ports:
+      - "8080:8080"
+    restart: always
+    volumes:
+        - ./backend:/app/
+    networks:
+      - mynetwork
+          
+networks:
+  mynetwork:
+    driver: bridge
+
+volumes:
+  index_data:
+    driver: local
+  backups:
+    driver: local

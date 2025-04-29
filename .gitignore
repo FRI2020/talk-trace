@@ -1,0 +1,46 @@
+# Ignore environment variables and secrets
+.env
+*.key
+*.pem
+
+# Ignore Python bytecode
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Ignore virtual environments
+venv/
+.env/
+*.venv/
+
+# Ignore logs and temp files
+*.log
+logs/
+tmp/
+*.tmp
+.pdf
+# Ignore OS-specific files
+.DS_Store
+Thumbs.db
+
+# Ignore dependency directories
+node_modules/
+dist/
+build/
+*.egg-info/
+
+# Ignore Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# Ignore database files
+*.sqlite3
+*.db
+
+# Ignore compiled C extensions
+*.so
+
+
+# Ignore drafts and temporary files
+*.tmp
+backend/drafts/
